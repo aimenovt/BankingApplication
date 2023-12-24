@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoC", "IoC\IoC.csproj", "{1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingApi", "BankingApi\BankingApi.csproj", "{FE3123F4-BB5C-4F4D-AA04-115486F8E6F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingData", "BankingData\BankingData.csproj", "{7D470F26-FA7B-4715-B34C-B34CE67547E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingData", "BankingData\BankingData.csproj", "{7D470F26-FA7B-4715-B34C-B34CE67547E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{C5512824-A757-4A46-8826-C2B07F92A1F3}"
 	ProjectSection(SolutionItems) = preProject

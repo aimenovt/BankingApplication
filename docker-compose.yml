@@ -1,30 +1,30 @@
 version: "3.9"
 
 networks:
-  banking-application-network:
+  bankingapplication_network:
     driver: bridge
-    
+
 services:
   postgres_db:
     container_name: postgres
     image: postgres:latest
     ports:
-      - "5433:5432"
+      - "5437:5432"
     environment:
-      POSTGRES_USER: user
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: BankingDB
+      POSTGRES_DB: BankingDatabase
     networks:
-      - banking-application-network
+      - bankingapplication_network
     volumes:
-      - bankingapplication-database-volume:/var/lib/postgresql/data
+      - bankingapplication-postgres-data:/var/lib/postgresql/data
     restart: always
     healthcheck:
       test: ["CMD", "pg_isready", "-q", "-h", "localhost", "-U", "postgres"]
       interval: 10s
       timeout: 5s
       retries: 3
-  
+
   rabbitmq:
     container_name: rabbit
     image: rabbitmq:3.11-management
@@ -35,7 +35,7 @@ services:
       RABBITMQ_DEFAULT_USER: user
       RABBITMQ_DEFAULT_PASS: password
     networks:
-      - banking-application-network
+      - bankingapplication_network
     restart: always
     healthcheck:
         test: [ "CMD", "rabbitmqctl", "status"]
@@ -44,4 +44,4 @@ services:
         retries: 5
 
 volumes:
-  bankingapplication-database-volume:
+  bankingapplication-postgres-data:

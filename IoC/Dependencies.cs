@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BankingData.Context;
+using BankingData.Interfaces;
+using BankingData.Repositories;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +14,10 @@ namespace IoC
     {
         public static void RegisterServices(IServiceCollection services)
         {
-
+            //Data
+            services.AddScoped<BankingDbContext>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
         }
     }
 }
