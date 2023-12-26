@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BankingData.Context;
 using BankingData.Dto.Account;
+using BankingData.Dto.Country;
 using BankingData.Interfaces;
 using BankingData.Models;
 using Microsoft.EntityFrameworkCore;
@@ -185,9 +186,19 @@ namespace BankingData.Repositories
             }
         }
 
-        public Task<ServiceResponse<GetAccountDto>> UpdateAccount(UpdateAccountDto updatedAccount)
+        public async Task<ServiceResponse<GetAccountDto>> UpdateAccount(UpdateAccountDto updatedAccount)
         {
-            throw new NotImplementedException();
+            var account = _bankingDbContext.Accounts.Where(c => c.Id == updatedAccount.Id).FirstOrDefault();
+
+            _mapper.Map(updatedAccount, account);
+
+            _bankingDbContext.Accounts.Update(account);
+            await _bankingDbContext.SaveChangesAsync();
+
+            var response = new ServiceResponse<GetAccountDto>();
+            response.Data = _mapper.Map(account, new GetAccountDto());
+
+            return response;
         }
     }
 }

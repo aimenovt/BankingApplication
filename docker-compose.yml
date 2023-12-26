@@ -34,8 +34,11 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: user
       RABBITMQ_DEFAULT_PASS: password
+      RABBITMQ_NODENAME: somenode@rabbitmq
     networks:
       - bankingapplication_network
+    volumes:
+      - bankingapplication-rabbitmq-data:/var/lib/rabbitmq/mnesia
     restart: always
     healthcheck:
         test: [ "CMD", "rabbitmqctl", "status"]
@@ -45,3 +48,4 @@ services:
 
 volumes:
   bankingapplication-postgres-data:
+  bankingapplication-rabbitmq-data:

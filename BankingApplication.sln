@@ -44,6 +44,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{C55128
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingApplication.Banking.Domain", "BankingApplication.Banking.Domain\BankingApplication.Banking.Domain.csproj", "{914EE922-76C9-4372-8CAE-65CCE8DE9B57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactonApi", "TransactonApi\TransactonApi.csproj", "{DA8FBDB1-D848-4649-AF94-6A74CB02944A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionData", "TransactionData\TransactionData.csproj", "{27173D6A-14DE-4272-BEA9-42219A72C197}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingApplication.Transaction.Domain", "BankingApplication.Transaction.Domain\BankingApplication.Transaction.Domain.csproj", "{ECF0CE21-46DF-401D-87D6-C74EA7C8F13B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +78,22 @@ Global
 		{7D470F26-FA7B-4715-B34C-B34CE67547E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D470F26-FA7B-4715-B34C-B34CE67547E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D470F26-FA7B-4715-B34C-B34CE67547E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{914EE922-76C9-4372-8CAE-65CCE8DE9B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{914EE922-76C9-4372-8CAE-65CCE8DE9B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{914EE922-76C9-4372-8CAE-65CCE8DE9B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{914EE922-76C9-4372-8CAE-65CCE8DE9B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8FBDB1-D848-4649-AF94-6A74CB02944A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8FBDB1-D848-4649-AF94-6A74CB02944A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8FBDB1-D848-4649-AF94-6A74CB02944A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8FBDB1-D848-4649-AF94-6A74CB02944A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27173D6A-14DE-4272-BEA9-42219A72C197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27173D6A-14DE-4272-BEA9-42219A72C197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27173D6A-14DE-4272-BEA9-42219A72C197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27173D6A-14DE-4272-BEA9-42219A72C197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF0CE21-46DF-401D-87D6-C74EA7C8F13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF0CE21-46DF-401D-87D6-C74EA7C8F13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF0CE21-46DF-401D-87D6-C74EA7C8F13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF0CE21-46DF-401D-87D6-C74EA7C8F13B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +114,10 @@ Global
 		{1C2F119A-44DE-4E63-B1A4-57D28B4CC32F} = {AB53CBC1-0E22-4693-AF16-CCAF186486ED}
 		{FE3123F4-BB5C-4F4D-AA04-115486F8E6F8} = {EE98B25D-D57E-41BA-9649-19A8CD9212AD}
 		{7D470F26-FA7B-4715-B34C-B34CE67547E8} = {86617C6E-5098-4BE6-9E1C-DAFE635E3A91}
+		{914EE922-76C9-4372-8CAE-65CCE8DE9B57} = {1DD9BCB9-CEA6-431B-8F2B-5CA740278963}
+		{DA8FBDB1-D848-4649-AF94-6A74CB02944A} = {2E61604E-6F92-4340-A8DB-F36666A1C288}
+		{27173D6A-14DE-4272-BEA9-42219A72C197} = {D53C67B5-75D2-413E-8BA9-928D6DD90366}
+		{ECF0CE21-46DF-401D-87D6-C74EA7C8F13B} = {C11A679C-09EF-4936-B369-F6308F113DDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE0D3028-C5E5-46D9-9A75-571AE76F184A}

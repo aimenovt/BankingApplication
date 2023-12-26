@@ -46,12 +46,15 @@ namespace BankingApplication.Bus
 
             var eventName = @event.GetType().Name;
 
-            channel.QueueDeclare(eventName, false, false, false, null);
+            channel.QueueDeclare(eventName, true, false, false, null);
 
             var message = JsonSerializer.Serialize(@event);
             var body = Encoding.UTF8.GetBytes(message);
 
-            channel.BasicPublish("", eventName, null, body);
+            var props = channel.CreateBasicProperties();
+            props.Persistent = true; // or props.DeliveryMode = 2;
+
+            channel.BasicPublish("", eventName, props, body);
         }
 
         public void Subscribe<T, TH>()
@@ -96,7 +99,7 @@ namespace BankingApplication.Bus
 
             var eventName = typeof(T).Name;
 
-            channel.QueueDeclare(eventName, false, false, false, null);
+            channel.QueueDeclare(eventName, true, false, false, null);
 
             var consumer = new AsyncEventingBasicConsumer(channel);
 

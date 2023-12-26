@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -10,7 +10,6 @@
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="7.1.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
       <PrivateAssets>all</PrivateAssets>
@@ -28,9 +27,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BankingApplication.Banking.Domain\BankingApplication.Banking.Domain.csproj" />
     <ProjectReference Include="..\BankingApplication.Bus\BankingApplication.Bus.csproj" />
+    <ProjectReference Include="..\BankingApplication.Transaction.Domain\BankingApplication.Transaction.Domain.csproj" />
     <ProjectReference Include="..\BankingApplicaton.Domain\BankingApplicaton.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Models\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Dto\" />
+    <Folder Include="Helper\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>
