@@ -8,13 +8,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BankingApplicaton.Domain\BankingApplicaton.Domain.csproj" />
+    <ProjectReference Include="..\BankingData\BankingData.csproj" />
+    <ProjectReference Include="..\TransactionData\TransactionData.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Events\" />
     <Folder Include="CommandHandlers\" />
-    <Folder Include="EventHandlers\" />
   </ItemGroup>
 
 </Project>

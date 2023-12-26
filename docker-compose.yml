@@ -13,7 +13,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: BankingDatabase
+      POSTGRES_DB: BankingDatabase, TransactionDatabase
     networks:
       - bankingapplication_network
     volumes:

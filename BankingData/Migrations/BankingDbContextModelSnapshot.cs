@@ -59,7 +59,7 @@ namespace BankingData.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("Accounts");
+                    b.ToTable("Accounts", (string)null);
                 });
 
             modelBuilder.Entity("BankingData.Models.Country", b =>
@@ -76,7 +76,7 @@ namespace BankingData.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countries");
+                    b.ToTable("Countries", (string)null);
                 });
 
             modelBuilder.Entity("BankingData.Models.Account", b =>

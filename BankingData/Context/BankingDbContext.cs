@@ -10,7 +10,7 @@ namespace BankingData.Context
 {
     public class BankingDbContext : DbContext
     {
-        public BankingDbContext(DbContextOptions<BankingDbContext> options)
+        public BankingDbContext(DbContextOptions options)
            : base(options)
         {
         }

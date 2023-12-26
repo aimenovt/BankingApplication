@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BankingApplication.Bus\BankingApplication.Bus.csproj" />
+    <ProjectReference Include="..\BankingApplication.Transaction.Domain\BankingApplication.Transaction.Domain.csproj" />
     <ProjectReference Include="..\BankingApplicaton.Domain\BankingApplicaton.Domain.csproj" />
     <ProjectReference Include="..\BankingData\BankingData.csproj" />
+    <ProjectReference Include="..\TransactionData\TransactionData.csproj" />
   </ItemGroup>
 
 </Project>
