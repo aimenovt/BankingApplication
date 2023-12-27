@@ -41,16 +41,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingData", "BankingData\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{C5512824-A757-4A46-8826-C2B07F92A1F3}"
 	ProjectSection(SolutionItems) = preProject
+		BankingDockerfile = BankingDockerfile
 		docker-compose.yml = docker-compose.yml
+		TransactionDockerfile = TransactionDockerfile
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingApplication.Banking.Domain", "BankingApplication.Banking.Domain\BankingApplication.Banking.Domain.csproj", "{914EE922-76C9-4372-8CAE-65CCE8DE9B57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactonApi", "TransactonApi\TransactonApi.csproj", "{DA8FBDB1-D848-4649-AF94-6A74CB02944A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactonApi", "TransactonApi\TransactonApi.csproj", "{DA8FBDB1-D848-4649-AF94-6A74CB02944A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionData", "TransactionData\TransactionData.csproj", "{27173D6A-14DE-4272-BEA9-42219A72C197}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionData", "TransactionData\TransactionData.csproj", "{27173D6A-14DE-4272-BEA9-42219A72C197}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingApplication.Transaction.Domain", "BankingApplication.Transaction.Domain\BankingApplication.Transaction.Domain.csproj", "{ECF0CE21-46DF-401D-87D6-C74EA7C8F13B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingApplication.Transaction.Domain", "BankingApplication.Transaction.Domain\BankingApplication.Transaction.Domain.csproj", "{ECF0CE21-46DF-401D-87D6-C74EA7C8F13B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

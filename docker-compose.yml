@@ -5,6 +5,38 @@ networks:
     driver: bridge
 
 services:
+  banking_microservice:
+    container_name: banking_micro
+    build:
+      context: .
+      dockerfile: BankingDockerfile
+    ports:
+      - "81:80"
+    networks: 
+      - bankingapplication_network
+    restart: always
+    depends_on: 
+      postgres_db:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  transaction_microservice:
+    container_name: transaction_micro
+    build:
+      context: .
+      dockerfile: TransactionDockerfile
+    ports:
+      - "82:80"
+    networks: 
+      - bankingapplication_network
+    restart: always
+    depends_on: 
+      postgres_db:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
   postgres_db:
     container_name: postgres
     image: postgres:latest

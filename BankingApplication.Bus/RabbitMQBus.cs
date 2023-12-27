@@ -36,7 +36,7 @@ namespace BankingApplication.Bus
         {
             var factory = new ConnectionFactory()
             {
-                HostName = "localhost",
+                HostName = "rabbitmq",
                 UserName = "user",
                 Password = "password"
             };
@@ -88,7 +88,7 @@ namespace BankingApplication.Bus
         {
             var factory = new ConnectionFactory()
             {
-                HostName = "localhost",
+                HostName = "rabbitmq",
                 UserName = "user",
                 Password = "password",
                 DispatchConsumersAsync = true
