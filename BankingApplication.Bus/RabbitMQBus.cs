@@ -130,11 +130,11 @@ namespace BankingApplication.Bus
             {
                 using (var scope = _serviceScopeFactory.CreateScope())
                 {
-                    var subscriptions = _handlers[eventName];
+                    var eventHandlers = _handlers[eventName];
 
-                    foreach(var subscription in subscriptions)
+                    foreach(var eventHandler in eventHandlers)
                     {
-                        var handler = scope.ServiceProvider.GetService(subscription);
+                        var handler = scope.ServiceProvider.GetService(eventHandler);
                         if (handler == null) continue;
                         var eventType = _eventTypes.SingleOrDefault(t => t.Name == eventName);
                         var @event = JsonSerializer.Deserialize(message, eventType);
